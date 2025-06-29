@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <h1>架空私立強豪校生成メーカー</h1>
+  <h1>架空私立強豪校<br>生成メーカー</h1>
   <button onclick="showRandomName()">学校名を生成</button>
   <div id="result"></div>
 
@@ -32,14 +32,16 @@
     const names3 = ["学園", "学院", "館", "実業", "義塾", "大附", ""];
     
     function showRandomName() {
-      const randomIndex1 = Math.floor(Math.random() * names1.length);
-      const randomIndex2 = Math.floor(Math.random() * names2.length);
-      const randomIndex3 = Math.floor(Math.random() * names3.length);
-      const name1 = names1[randomIndex1];
-      const name2 = names2[randomIndex2];
-      const name3 = names3[randomIndex3];
+      const name1 = names1[Math.floor(Math.random() * names1.length)];
 
-      document.getElementById("result").textContent = name1 + name2 + name3 ;
+      let name2;
+      do {
+        name2 = names2[Math.floor(Math.random() * names2.length)];
+      } while (name2 === name1);
+
+      const name3 = names3[Math.floor(Math.random() * names3.length)];
+
+      document.getElementById("result").textContent = name1 + name2 + name3;
     }
   </script>
 </body>
