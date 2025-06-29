@@ -22,16 +22,21 @@
   </style>
 </head>
 <body>
-  <h1>ランダム名前生成機械</h1>
-  <button onclick="showRandomName()">名前を表示</button>
+  <h1>架空私立強豪校生成メーカー</h1>
+  <button onclick="showRandomName()">学校名を生成</button>
   <div id="result"></div>
 
   <script>
-    const names = ["たけだ", "さとう", "やまだ", "いとう", "こばやし", "なかむら", "たなか", "すずき", "まつもと", "おおた"];
+    const names = ["桐", "光", "星", "聖", "慶", "徳", "望", "東", "成", "王", "帝", "明", "陽", "洋", "城", "和", "秀", "正", "翔", "英", "清", "北", "西", "新", "泉", "常", "青", "京", "誠"];
+    const names = ["桐", "光", "星", "聖", "慶", "徳", "望", "東", "成", "王", "帝", "明", "陽", "洋", "城", "和", "秀", "正", "翔", "英", "清", "北", "西", "新", "泉", "常", "青", "京", "誠", "陵"];
+
 
     function showRandomName() {
-      const randomIndex = Math.floor(Math.random() * names.length);
+      const randomIndex1 = Math.floor(Math.random() * names.length);
+      const randomIndex2 = Math.floor(Math.random() * names.length);
+      const randomIndex3 = Math.floor(Math.random() * names.length);
       const name = names[randomIndex];
+
       document.getElementById("result").textContent = name;
     }
   </script>
