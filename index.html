@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダム名前生成</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 1.5rem;
+      padding: 10px 20px;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>ランダム名前生成器</h1>
+  <button onclick="showRandomName()">名前を表示</button>
+  <div id="result"></div>
+
+  <script>
+    const names = ["たけだ", "さとう", "やまだ", "いとう", "こばやし", "なかむら", "たなか", "すずき", "まつもと", "おおた"];
+
+    function showRandomName() {
+      const randomIndex = Math.floor(Math.random() * names.length);
+      const name = names[randomIndex];
+      document.getElementById("result").textContent = name;
+    }
+  </script>
+</body>
+</html>
